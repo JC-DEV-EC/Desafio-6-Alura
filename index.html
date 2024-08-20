@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 6</title>
+    <script src="script.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(45deg, #FFD700 25%, transparent 25%) -50px 0,
+                        linear-gradient(135deg, #FFD700 25%, transparent 25%) -50px 0,
+                        linear-gradient(45deg, transparent 75%, #FFD700 75%),
+                        linear-gradient(135deg, transparent 75%, #FFD700 75%);
+            background-size: 100px 100px;
+            animation: backgroundMove 5s linear infinite;
+            background-color: #2d2d2d; 
+        }
+
+        @keyframes backgroundMove {
+            0% { background-position: 0 0, 0 0, 0 0, 0 0; }
+            100% { background-position: 100px 100px, 100px 100px, -100px -100px, -100px -100px; }
+        }
+    </style>
+</head>
+<body class="text-white flex items-center justify-center min-h-screen">
+    <div class="w-full max-w-md p-4">
+        <div class="mb-6">
+            <img src="https://d335luupugsy2.cloudfront.net/cms/files/10224/1722974906/$2rp7nct8hor" alt="Encabezado" class="w-full rounded-lg shadow-lg">
+        </div>
+        <div class="bg-gray-800 p-8 rounded-lg shadow-md">
+            <h1 class="text-3xl font-bold text-center text-yellow-400 mb-6">Lista de Compras</h1>
+            <div class="flex mb-4">
+                <button id="btnAgregar" class="flex-1 bg-yellow-500 text-black p-2 rounded-lg hover:bg-yellow-600">Agregar Alimento</button>
+            </div>
+            <div id="lista-container">
+                <!-- Aquí se mostrarán los resultados -->
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
